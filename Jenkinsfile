@@ -5,11 +5,9 @@ pipeline {
 	stages{
 	  stage ('Build'){
 	    steps{
-		    script{
-		sh """
+		sh '''
 			mvn clean install
-			"""
-		    }
+			'''
 		}
 	  }
 	  stage ('Unit Test'){
